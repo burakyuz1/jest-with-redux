@@ -3,21 +3,6 @@ import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from '../../../utils/test-utils'
 import UserDisplay from '../UserDisplay'
 
-// export const handlers = [
-//   rest.get('/u34uuu', (req, res, ctx) => {
-//     return res(ctx.json({ user: { name: 'obrosoft' }, status: 'complete' }), ctx.delay(150))
-//   })
-// ]
-
-// const server = setupServer(...handlers)
-
-// beforeAll(() => server.listen())
-
-// afterEach(() => server.resetHandlers())
-
-// afterAll(() => server.close())
-
-
 test('fetches and receive data', async () => {
   renderWithProviders(<UserDisplay />)
 
@@ -36,7 +21,4 @@ test('fetches and receive data', async () => {
 
   //sonuç döndüğü zaman ekranda ms
   await screen.findByText(/__testUser__/i)
-
-  // expect(await screen.findByText(/Leanne Graham/i)).toBeInTheDocument()
-
 })
